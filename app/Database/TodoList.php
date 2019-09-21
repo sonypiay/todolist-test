@@ -8,4 +8,5 @@ class TodoList extends Model
 {
   public $timestamps = true;
   protected $table = 'todo';
+  protected $primaryKey = 'todo_id';
 }

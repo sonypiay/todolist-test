@@ -14,10 +14,17 @@ class HomeController extends Controller
 
   public function get_todolist( TodoList $todo )
   {
-    $getodo = $todo->orderBy('id', 'desc')
+    $getodo = $todo->orderBy('todo_id', 'desc')
     ->get();
 
-    return response()->json( $getodo, 200 );
+    $res = [
+      'results' => [
+        'data' => $getodo,
+        'total' => $getodo->count()
+      ]
+    ];
+
+    return response()->json( $res, 200 );
   }
 
   public function add_todo( Request $request, TodoList $todo )
@@ -26,6 +33,30 @@ class HomeController extends Controller
     $todo->todo_name = $newtodo;
     $todo->save();
 
-    return response()->json(['statusText' => 'success'], 200);
+    $res = [
+      'status' => 200,
+      'statusText' => 'success',
+      'request' => $newtodo
+    ];
+
+    return response()->json($res, $res['status']);
+  }
+
+  public function delete_todo( Request $request, TodoList $todo )
+  {
+    $todos = $request->todos;
+
+    foreach( $todos as $t )
+    {
+      $todo->where('todo_id', $t)
+      ->delete();
+    }
+
+    $res = [
+      'status' => 200,
+      'statusText' => 'success'
+    ];
+
+    return response()->json($res, $res['status']);
   }
 }

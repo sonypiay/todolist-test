@@ -12,5 +12,6 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('/gettodo', 'HomeController@get_todolist');
+Route::get('/get_todo', 'HomeController@get_todolist');
 Route::post('/add_todo', 'HomeController@add_todo');
+Route::delete('/delete_todo', 'HomeController@delete_todo');
