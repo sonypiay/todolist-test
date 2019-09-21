@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+Route::get('/gettodo', 'HomeController@get_todolist');
+Route::post('/add_todo', 'HomeController@add_todo');
