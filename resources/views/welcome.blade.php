@@ -14,7 +14,7 @@
 <body>
   <div class="uk-container uk-margin-large-top">
     <div class="uk-grid-small" uk-grid>
-      <div class="uk-width-1-2">
+      <div class="uk-width-1-2@xl uk-width-1-2@l uk-width-1-2@m uk-width-1-1@s">
         <div class="uk-card uk-card-default">
           <div class="uk-card-header">
             <h3 class="uk-card-title">Todo List - jQuery</h3>
@@ -37,10 +37,10 @@
           </div>
         </div>
       </div>
-      <div class="uk-width-1-2">
+      <div class="uk-width-1-2@xl uk-width-1-2@l uk-width-1-2@m uk-width-1-1@s">
         <div class="uk-card uk-card-default">
           <div class="uk-card-header">
-            <h3 class="uk-card-title">Todo List - jQuery</h3>
+            <h3 class="uk-card-title">Todo List - Ajax and MySQL</h3>
           </div>
           <div class="uk-card-body">
             <div class="uk-alert-danger msg_ajx" uk-alert></div>
