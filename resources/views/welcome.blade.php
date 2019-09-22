@@ -10,7 +10,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 </head>
 <body>
   <div class="uk-container uk-margin-large-top">
@@ -63,5 +62,6 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
